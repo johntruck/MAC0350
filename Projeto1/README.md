@@ -2,3 +2,7 @@ O primeiro projeto de MAC0350 consiste em um comparador de memes. O usuário ter
 
 Esse projeto é inspirado no site popular da gringa Higher or Lower Game (https://www.higherlowergame.com/).
 
+Requirements.txt
+fastapi[standard]
+jinja2
+sqlmodel
