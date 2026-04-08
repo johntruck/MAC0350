@@ -1,0 +1,35 @@
+<!-- Arquivo container_memes.html -->
+<style>
+    body {
+        background-color: {{ color }}; /* em hipotese nenhuma mexer aqui pq se der espaco quebra o site */
+    }
+</style>
+<div class="memes">
+    <div id="mem1">
+        <div class="curtidas">{{ curtidas1 }} Upvotes</div>
+        <div class="omeme" hx-trigger="click"
+            hx-get="/proximo_round?meme_id1={{ id1+2  }}&&meme_id2={{ id2+2 }}&acertos={{ acertos }}"
+            hx-target="#container_principal" hx-push-url="false">
+            <img class="img_revelada" src="data:image/jpeg;base64,{{ meme_img1 }}" alt="Meme">
+
+        </div>
+        <a href="{{ fonte1 }}">Fonte</a>
+    </div>
+</div>
+<div class="memes">
+    <div id="mem2">
+        <div class="curtidas">{{ curtidas2 }} Upvotes</div>
+
+        <div class="omeme" hx-trigger="click"
+            hx-get="/proximo_round?meme_id1={{ id1+2  }}&&meme_id2={{ id2+2 }}&acertos={{ acertos }}"
+            hx-target="#container_principal" hx-push-url="false">
+            <img class="img_revelada" src="data:image/jpeg;base64,{{ meme_img2 }}" alt="Meme">
+        </div>
+        <a href="{{ fonte2 }}">Fonte</a>
+
+    </div>
+</div>
+
+<h1 id="h1_principal" hx-swap-oob="true">
+    Acertos: {{ acertos }}/5
+</h1>

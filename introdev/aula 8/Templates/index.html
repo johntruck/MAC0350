@@ -1,0 +1,39 @@
+<!-- Arquivo index.html -->
+
+<DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <title>Meu Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js"
+            integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F"
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav style="flex-direction: row;">
+            <button id="btn1" hx-get="/home/jupiterweb" hx-target="main" hx-push-url="true">
+                Página do Jupiter
+            </button>
+            <button id="btn2" hx-get=" /home/alan" hx-target="main" hx-push-url="true">
+                Página do Alan
+            </button>
+            <button id="btn3" hx-get="/home/curtidas" hx-target="main" hx-push-url="true">
+                Página de curtidas
+            </button>
+
+            <button hx-get="/alternar" hx-target="main" hx-trigger="click, keyup[shiftKey&&key=='P'] from:body">
+                Shift+P para alternar páginas
+            </button>
+        </nav>
+
+
+        <main hx-get="{{ pagina }}" hx-target="main" hx-trigger="load" hx-push-url="true">
+        </main>
+    </body>
+    <script>
+        document.addEventListener('keydown', e => console.log(e));
+    </script>
+
+    </html>

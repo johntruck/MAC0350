@@ -1,0 +1,30 @@
+<!-- Arquivo index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js"
+        integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F"
+        crossorigin="anonymous"></script>
+    <title>Projeto IntroDev</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+
+</head>
+
+<body id="obody">
+    <h1 id="h1_principal" hx-swap-oob="true">
+        Qual o meme com mais upvotes?
+
+    </h1>
+    <div id=container_principal hx-get="/start_memes" hx-push-url="false" hx-trigger="load" class="memes-container">
+
+    </div>
+</body>
+
+<script>
+</script>
+
+</html>

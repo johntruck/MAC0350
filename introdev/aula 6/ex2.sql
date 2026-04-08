@@ -1,0 +1,12 @@
+CREATE TABLE usuarios (
+  	usuarios_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    acertos INTEGER NOT NULL
+);
+
+CREATE TABLE memes (
+    memes_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    
+    upvotes INTEGER NOT NULL,
+    imagem BLOB NOT NULL
+);

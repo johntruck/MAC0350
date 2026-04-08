@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            background-color: black;
+            flex: 1;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: white;
+            font-size: xx-small;
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        a:hover {
+            color: gray;
+            text-decoration: none;
+        }
+
+        .cabecalho {
+            text-align: left;
+            padding: 0.8%;
+            background-color: black;
+        }
+
+        .menu {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            padding: 1%;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        .caixa {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid grey;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .menu-link {
+            flex: 1;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .menu-link:hover .caixa {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 800px) {
+            .menu {
+                flex-direction: column;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cabecalho">
+
+        <header>
+            <h1 style="color: white; font-size: xx-large;"><i> Alan Mitchell Durham</i> ⋅
+                <a href="https://www5.usp.br/"> Institute of Mathematics and Statistics of University of São Paulo</a>
+            </h1>
+            <h1 style="font-size: 20px;"><i> PhD, University of Illinois at Urbana-Champaign, 1997</i></h1>
+            <h1 style="font-size: 15px;"> Bioinformatics ⋅ Language Implementation ⋅ Object Oriented Programming ⋅
+                Grammar Inference ⋅ Software Engineering - Framework constrution ⋅ Human-computer Interfaces</h1>
+        </header>
+    </div>
+
+    <div class="menu">
+        <a href="https://www.ime.usp.br/~alan/curriculo.ps" class="menu-link">
+            <div class="caixa">
+                <img src="cv.jpg">
+                <h1 style="color: black;">Curriculum Vitae</h1>
+            </div>
+        </a>
+
+        <a href="https://www.ime.usp.br/~alan/pesquisa.html" class="menu-link">
+            <div class="caixa">
+                <img src="research.jpg">
+                <h1 style="color: black;">Research</h1>
+            </div>
+        </a>
+
+        <a href="https://www.ime.usp.br/~alan/interesting_articles" class="menu-link">
+            <div class="caixa">
+                <img src="article.jpg">
+                <h1 style="color: black;">Articles</h1>
+            </div>
+        </a>
+
+        <a href="https://www.ime.usp.br/~alan/cursos/mac115/index.html" class="menu-link">
+            <div class="caixa">
+                <img src="curso.jpg">
+                <h1 style="color: black;">Course</h1>
+            </div>
+        </a>
+    </div>
+    <div>
+        <footer>
+            <h1 style="color: black;">Instituto de Matemática e Estatística da USP, CEP 05508-900, Rua do Matão, 1010,
+                Sao Paulo, SP, Brasil,
+                +55 (11) 818-6299 or 818-6135 </h1>
+            <h1 style="color: black;">durham@ime.usp.br</h1>
+        </footer>
+    </div>
+</body>
+
+
+
+</html>

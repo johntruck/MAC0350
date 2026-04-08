@@ -1,0 +1,54 @@
+<!-- Arquivo edicao.html -->
+<style>
+    #container-edicao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+
+
+    #container-edicao input {
+
+
+        width: 80%;
+        max-width: 500px;
+        padding: 12px 20px;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid white;
+        outline: none;
+
+    }
+
+    #container-edicao button {
+
+        width: 80%;
+        max-width: 500px;
+        padding: 12px 20px;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid white;
+        outline: none;
+    }
+
+    #form-edicao {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<div id="container-edicao">
+    <form id="form-edicao">
+        <input name="nova_bio" type="text" placeholder="Nova bio">
+        <button hx-put="/atualizaBio" hx-target="#obody"> Atualizar bio</button>
+    </form>
+
+    <button hx-delete="/deletaUsuario" hx-target="#obody">
+        Deletar usuário
+    </button>
+    <button hx-get="/ranking" hx-target="#obody">Rankings</button>
+</div>

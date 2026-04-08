@@ -1,0 +1,74 @@
+<!-- Arquivo lista.html -->
+
+<style>
+    #lista {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+    }
+
+    #lista li {
+        color: white;
+
+    }
+
+    #lista ul {
+        list-style: none;
+        padding: 0;
+        font-size: 3vh;
+    }
+
+    #lista a {
+        font-size: large;
+    }
+
+    #barra-de-busca {
+        display: flex;
+        justify-content: center;
+        margin-inline: 0;
+        padding-inline: 0;
+    }
+
+    #barra-de-busca input {
+
+        margin-inline: 0;
+        padding-inline: 0;
+        width: 100%;
+        max-width: 500px;
+        padding: 12px 20px;
+        font-size: 2rem;
+        border-radius: 8px;
+        border: 1px solid white;
+        outline: none;
+    }
+
+    @media (max-width: 800px) {
+        #barra-de-busca input {
+            margin-inline: 0;
+            padding-inline: 0;
+            width: 70%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 2rem;
+            border-radius: 8px;
+            border: 1px solid white;
+            outline: none;
+        }
+    }
+</style>
+
+<div id="barra-de-busca">
+    <input type="text" name="busca" placeholder="Buscar Usuários" hx-get="/lista" hx-trigger="input changed delay:500ms"
+        hx-select="#lista" hx-target="#lista">
+</div>
+
+<div id="lista">
+    <ul>
+        {% for usuario in usuarios %}
+        <li>{{ usuario.nome }} {{ usuario.acertos }} {{ usuario.bio }} <a style="font-size: 3vh;"
+                href="{{ usuario.meme_favorito.link }}">Link
+                do Meme</a></li>
+        {% else %}
+        <li>Não há usuarios</li>
+        {% endfor %}
+    </ul>
+</div>

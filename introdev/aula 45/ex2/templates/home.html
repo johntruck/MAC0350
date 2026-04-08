@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FastAPI</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="username" placeholder="Nome">
+        <input type="text" id="bio" placeholder="Bio">
+        <input type="text" id="senha" placeholder="Senha">
+        <button type="button" id="botao-alvo">Salvar via JS</button>
+    </form>
+    <a href="/login">Login</a>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector("#botao-alvo").addEventListener('click', async function enviarUsuario() {
+            const dados = {
+                username: document.getElementById('username').value,
+                bio: document.getElementById('bio').value,
+                senha: document.getElementById('senha').value,
+            };
+
+            const resposta = await fetch('/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            });
+
+            if (resposta.ok) {
+                const resultado = await resposta.json();
+                alert("Usuário " + resultado.usuario + " criado!");
+            } else {
+                alert("Erro ao enviar!");
+            }
+        })
+    });
+</script>
+
+</html>

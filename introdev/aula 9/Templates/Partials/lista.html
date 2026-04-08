@@ -1,0 +1,33 @@
+<!-- Arquivo lista.html -->
+<style>
+    /* pra resolver o bug do indicator nao aparecendo */
+    .htmx-indicator {
+        display: none;
+    }
+
+    .htmx-request.htmx-indicator {
+        display: inline;
+    }
+</style>
+
+<div>
+    <input type="text" name="busca" placeholder="Buscar..." hx-get="/lista" hx-trigger="input changed delay:1000ms"
+        hx-select="#lista" hx-target="#lista" hx-indicator="#indicator">
+
+    <img id="indicator" class="htmx-indicator" src="/Static/spinner.svg" alt="Carregando..." />
+</div>
+<div id="lista">
+    <ul>
+        {% for aluno in alunos %}
+        <li>{{ aluno.id }} {{ aluno.nome }}</li>
+        {% else %}
+        <li>Não há alunos</li>
+        {% endfor %}
+    </ul>
+</div>
+<button hx-get="/lista?num_pag={{ num_pag -1 }}" hx-target="main" {% if num_pag==1 %} disabled {% endif %}>
+    Anterior
+</button>
+<button hx-get="/lista?num_pag={{ num_pag + 1}}" hx-target="main" {% if num_pag==max %} disabled {% endif %}>
+    Próximo
+</button>

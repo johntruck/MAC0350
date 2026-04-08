@@ -1,0 +1,105 @@
+<style>
+    .jupiter {
+        background-color: orange;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .jupiter {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .jupiter .caixa-de-login {
+        background-color: white;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        padding: 40px;
+        width: 450px;
+        text-align: center;
+    }
+
+    .jupiter .conteiner-do-login {
+        background-color: white;
+        border: 3px solid grey;
+        border-radius: 8px;
+        padding: 40px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .jupiter .logo {
+        box-sizing: border-box;
+
+    }
+
+    .jupiter input {
+        width: 100%;
+        padding: 13px 15px;
+        border: 1px solid #dadce0;
+        border-radius: 16px;
+        font-size: 16px;
+        box-sizing: border-box;
+        margin: 2px;
+        outline: none;
+    }
+
+    .jupiter input:hover {
+        background-color: rgb(207, 206, 206);
+    }
+
+    .jupiter footer {
+        background-color: orange;
+        padding: 20px;
+        text-align: center;
+        width: 80%;
+        position: fixed;
+        bottom: 0;
+        height: 7vh;
+    }
+
+    .jupiter img {
+        background-color: white;
+        max-width: 50%;
+        height: auto;
+    }
+
+    #btn1 {
+        color: green;
+    }
+</style>
+
+<div class="jupiter">
+    <div class="conteiner-do-login">
+        <header>
+            <div class="logo">
+                <img src="/static/usp-logo.png">
+            </div>
+        </header>
+        <div>
+            <div class="caixa-do-login">
+                <form>
+                    <input type="text" placeholder="Usuário" name="usuario">
+                    <input type="password" placeholder="Senha" name="senha">
+                    <input type="submit" style="padding: 5px 13px;">
+                </form>
+                <a href="https://uspdigital.usp.br/jupiterweb/esqueciSenha">Esqueci a Senha</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="https://uspdigital.usp.br/jupiterweb/creditos.jsp">Cŕeditos</a>
+        <a>|</a>
+        <a href="https://uspdigital.usp.br/jupiterweb/jupColegiadoEmailLista">Fale Conosco</a>
+        <a>© 1999 - 2025 - Superintendência de Tecnologia da Informação/USP</a>
+    </footer>
+</div>

@@ -1,0 +1,12 @@
+<style>
+    #btn3 {
+        color: green;
+    }
+</style>
+<button type="button" id="btn-curtidas" hx-post="/curtir" hx-target="#span-curtidas" hx-push-url="false">
+    <span id="span-curtidas" hx-trigger="load">{{ curtidas
+        }}</span>
+</button>
+<button type="button" id="btn-remove-curtidas" hx-delete="/curtir" hx-target="#span-curtidas" hx-confirm="Tem certeza?">
+    Zerar Contador
+</button>

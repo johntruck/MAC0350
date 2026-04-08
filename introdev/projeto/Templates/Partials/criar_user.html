@@ -1,0 +1,24 @@
+<!-- Arquivo edicao.html -->
+<!-- aqui tudo está inline por que o criar_user.html esta sendo enviado de maneira incorreta -->
+<div id="container-user"
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding-top: 50px;">
+
+    <form
+        style="display: flex; flex-direction: column; gap: 4px; width: 100%; align-items: center; justify-content: center;"
+        hx-post="/novoUsuario?acertos={{ acertos }}" hx-target="#container-user">
+
+        <input name="nome" type="text" placeholder="Seu nome"
+            style="width: 90%; max-width: 500px; height: 70px; font-size: 1.5rem; padding: 12px 20px; border-radius: 8px; border: 1px solid white; background: white; color: black; box-sizing: border-box;">
+
+        <input name="link" type="text" placeholder="Link do seu meme favorito"
+            style="width: 90%; max-width: 500px; height: 70px; font-size: 1.5rem; padding: 12px 20px; border-radius: 8px; border: 1px solid white; background: white; color: black; box-sizing: border-box;">
+
+        <input name="bio" type="text" placeholder="Bio"
+            style="width: 90%; max-width: 500px; height: 70px; font-size: 1.5rem; padding: 12px 20px; border-radius: 8px; border: 1px solid white; background: white; color: black; box-sizing: border-box;">
+
+        <button type="submit"
+            style="width: 90%; max-width: 500px; height: 70px; font-size: 1.5rem; border-radius: 8px; border: 1px white; background: white; cursor: pointer;">
+            Enviar
+        </button>
+    </form>
+</div>
